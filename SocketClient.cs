@@ -13,10 +13,10 @@ using System.Net.Http.Headers;
 
 namespace SocketClient
 {
-    class Program
+    public class SocketClient
     {
         private static byte[] result = new byte[1024];
-        static void Main(string[] args)
+        public void SocketRun(int id)
         {
             //設定伺服器IP地址
             IPAddress ip = IPAddress.Parse("127.0.0.1");
@@ -36,24 +36,25 @@ namespace SocketClient
             int receiveLength = clientSocket.Receive(result);
             Console.WriteLine("接收伺服器訊息：{0}", Encoding.ASCII.GetString(result, 0, receiveLength));
             //通過 clientSocket 傳送資料
-            for (int i = 0; i < 5; i++)
-            {
+            //for (int i = 0; i < 5; i++)
+            //{
                 try
                 {
                     //Thread.Sleep(1000);    //等待1秒鐘
-                    string sendMessage = "client send Message Hellp" + DateTime.Now;
-                    clientSocket.Send(Encoding.ASCII.GetBytes(sendMessage));
-                    Console.WriteLine("向伺服器傳送訊息：{0}" + sendMessage);
+                    string sendMessage = "client send Message " + DateTime.Now+",ID = "+ id;
+                    //送出id
+                    clientSocket.Send(Encoding.ASCII.GetBytes(id.ToString()));
+                    //Console.WriteLine("向伺服器傳送訊息：{0}" + sendMessage);
                 }
                 catch
                 {
                     clientSocket.Shutdown(SocketShutdown.Both);
                     clientSocket.Close();
-                    break;
+                    //break;
                 }
-            }
-            Console.WriteLine("傳送完畢，按回車鍵退出");
-            Console.ReadLine();
+            //}
+            //Console.WriteLine("傳送完畢，按回車鍵退出");
+            //Console.ReadLine();
         }
     }
 }

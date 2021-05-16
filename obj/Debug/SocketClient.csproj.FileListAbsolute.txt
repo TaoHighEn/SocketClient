@@ -5,3 +5,10 @@ E:\SocketClient\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cac
 E:\SocketClient\SocketClient\obj\Debug\SocketClient.exe
 E:\SocketClient\SocketClient\obj\Debug\SocketClient.pdb
 E:\SocketClient\SocketClient\obj\Debug\SocketClient.csprojAssemblyReference.cache
+D:\SocketClient\bin\Debug\SocketClient.exe.config
+D:\SocketClient\bin\Debug\SocketClient.exe
+D:\SocketClient\bin\Debug\SocketClient.pdb
+D:\SocketClient\obj\Debug\SocketClient.csprojAssemblyReference.cache
+D:\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
+D:\SocketClient\obj\Debug\SocketClient.exe
+D:\SocketClient\obj\Debug\SocketClient.pdb
